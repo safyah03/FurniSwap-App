@@ -1,0 +1,2 @@
+E:/FurniSwap-App-master/FurniSwap-App/android/app/.cxx/Debug/435v5q1y/x86_64/CMakeFiles/edit_cache.dir
+E:/FurniSwap-App-master/FurniSwap-App/android/app/.cxx/Debug/435v5q1y/x86_64/CMakeFiles/rebuild_cache.dir

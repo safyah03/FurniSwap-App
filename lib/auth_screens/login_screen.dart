@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/widgets.dart';
 import 'package:furni_swap/auth_screens/forgot_password_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -35,6 +32,10 @@ class LoginScreen extends StatelessWidget {
   Widget buildSocialAccountItem({required AssetImage icon}) {
     return ElevatedButton(
       onPressed: () {},
+      style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.white,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 17, horizontal: 5),
         child: Image(
@@ -43,10 +44,6 @@ class LoginScreen extends StatelessWidget {
           height: 25,
         ),
       ),
-      style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.white,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))),
     );
   }
 
@@ -55,7 +52,7 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_sharp),
+          icon: const Icon(Icons.arrow_back_ios_sharp),
           onPressed: () {},
         ),
       ),
@@ -75,14 +72,14 @@ class LoginScreen extends StatelessWidget {
               buildTextFormField(
                   obscureText: false,
                   type: TextInputType.emailAddress,
-                  label: Text("Email")),
+                  label: const Text("Email")),
               const SizedBox(
                 height: 10,
               ),
               buildTextFormField(
                   obscureText: true,
                   type: TextInputType.visiblePassword,
-                  label: Text("Password")),
+                  label: const Text("Password")),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
@@ -93,7 +90,7 @@ class LoginScreen extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                                 builder: (context) =>
-                                    ForgotPasswordScreen()));
+                                    const ForgotPasswordScreen()));
                       },
                       icon: const Icon(
                         Icons.arrow_right_alt,
@@ -101,7 +98,7 @@ class LoginScreen extends StatelessWidget {
                       ))
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               SizedBox(
@@ -110,7 +107,7 @@ class LoginScreen extends StatelessWidget {
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
                         elevation: 5,
-                        backgroundColor: Color(0xff3a75ba),
+                        backgroundColor: const Color(0xff3a75ba),
                         shadowColor: Colors.redAccent,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20))),
@@ -119,15 +116,15 @@ class LoginScreen extends StatelessWidget {
                       style: TextStyle(color: Colors.white),
                     )),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 80,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text("Or login with social account"),
-                  SizedBox(
+                  const Text("Or login with social account"),
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(
@@ -135,7 +132,7 @@ class LoginScreen extends StatelessWidget {
                     children: [
                       buildSocialAccountItem(
                           icon: const AssetImage("assets/images/google.png")),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       buildSocialAccountItem(
