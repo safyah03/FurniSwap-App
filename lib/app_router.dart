@@ -12,7 +12,7 @@ class AppRouter {
       default:
         return MaterialPageRoute(
           builder: (_) => const Scaffold(
-            body: Center(child: Text('صفحة مش موجودة 😢')),
+            body: Center(child: Text('Page Not Found!!')),
           ),
         );
     }
