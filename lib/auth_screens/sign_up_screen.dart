@@ -32,6 +32,10 @@ class SignUpScreen extends StatelessWidget {
   Widget buildSocialAccountItem({required AssetImage icon}) {
     return ElevatedButton(
       onPressed: () {},
+      style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.white,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 17, horizontal: 5),
         child: Image(
@@ -40,10 +44,6 @@ class SignUpScreen extends StatelessWidget {
           height: 25,
         ),
       ),
-      style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.white,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))),
     );
   }
 
@@ -52,7 +52,7 @@ class SignUpScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_sharp),
+          icon: const Icon(Icons.arrow_back_ios_sharp),
           onPressed: () {},
         ),
       ),
@@ -72,35 +72,34 @@ class SignUpScreen extends StatelessWidget {
               buildTextFormField(
                   obscureText: false,
                   type: TextInputType.name,
-                  label: Text("Name")),
+                  label: const Text("Name")),
               const SizedBox(
                 height: 10,
               ),
               buildTextFormField(
                   obscureText: false,
                   type: TextInputType.emailAddress,
-                  label: Text("Email")),
+                  label: const Text("Email")),
               const SizedBox(
                 height: 10,
               ),
               buildTextFormField(
                   obscureText: true,
                   type: TextInputType.visiblePassword,
-                  label: Text("Password")),
+                  label: const Text("Password")),
               const SizedBox(
                 height: 7,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text("Already have an account?"),
+                  const Text("Already have an account?"),
                   IconButton(
                       onPressed: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) =>
-                                LoginScreen()));
+                                builder: (context) => const LoginScreen()));
                       },
                       icon: const Icon(
                         Icons.arrow_right_alt,
@@ -108,7 +107,7 @@ class SignUpScreen extends StatelessWidget {
                       ))
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               SizedBox(
@@ -117,7 +116,7 @@ class SignUpScreen extends StatelessWidget {
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
                         elevation: 5,
-                        backgroundColor: Color(0xff3a75ba),
+                        backgroundColor: const Color(0xff3a75ba),
                         shadowColor: Colors.redAccent,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20))),
@@ -126,22 +125,22 @@ class SignUpScreen extends StatelessWidget {
                       style: TextStyle(color: Colors.white),
                     )),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 80,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text("Or sign up with social account"),
-                  SizedBox(
+                  const Text("Or sign up with social account"),
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       buildSocialAccountItem(
-                          icon: AssetImage("assets/images/google.png")),
-                      SizedBox(
+                          icon: const AssetImage("assets/images/google.png")),
+                      const SizedBox(
                         width: 10,
                       ),
                       buildSocialAccountItem(

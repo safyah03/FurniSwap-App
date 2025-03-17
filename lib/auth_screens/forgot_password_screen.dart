@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../nav_screen.dart';
+import '../presentation/screens/nav_screen.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
   const ForgotPasswordScreen({super.key});
@@ -35,7 +35,7 @@ class ForgotPasswordScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_sharp),
+          icon: const Icon(Icons.arrow_back_ios_sharp),
           onPressed: () {},
         ),
       ),
@@ -54,14 +54,14 @@ class ForgotPasswordScreen extends StatelessWidget {
               ),
               const Text(
                   "Please, enter your email address. You will receive a link to create a new password via email."),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               buildTextFormField(
                   obscureText: false,
                   type: TextInputType.emailAddress,
-                  label: Text("Email")),
-              SizedBox(
+                  label: const Text("Email")),
+              const SizedBox(
                 height: 50,
               ),
               SizedBox(
@@ -71,12 +71,11 @@ class ForgotPasswordScreen extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) =>
-                                  NavScreen()));
+                              builder: (context) => const NavScreen()));
                     },
                     style: ElevatedButton.styleFrom(
                         elevation: 5,
-                        backgroundColor: Color(0xff3a75ba),
+                        backgroundColor: const Color(0xff3a75ba),
                         shadowColor: Colors.redAccent,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20))),
